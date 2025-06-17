@@ -1,4 +1,13 @@
-.header{
+body {
+    background-image: url("https://images.pexels.com/photos/164005/pexels-photo-164005.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0; 
+    padding: 0;
+}
+
+.header {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     height: 5.5rem;
@@ -14,21 +23,22 @@
     backdrop-filter: blur(4px);
     color: rgb(255, 255, 255);
     z-index: 999;
+    box-sizing: border-box; 
 }
 
-.heading_font{
-    margin: 0%; 
+.heading_font {
+    margin: 0;
     padding-top: 5px;
     padding-bottom: 0;
 }
 
-.tagline{
+.tagline {
     font-size: 0.8rem;
     margin-top: -9px;
     padding-top: 1px;
 }
 
-.summercollections{
+.summercollections {
     font-size: 1.5rem;
     text-align: center;
     font-family: "Quicksand", sans-serif;
@@ -41,18 +51,20 @@
     padding: 1px;
     backdrop-filter: blur(5px);
     border-radius: 20px;
-}  
+    box-sizing: border-box;
+}
 
-#dix2{
+#dix2 {
     margin: auto;
     margin-top: 1rem;
 }
 
-.summer-text{
+.summer-text {
     margin: 7px;
 }
 
-.container1{
+.container1,
+.container2 {
     background-color: rgba(0, 0, 0, 0.6);
     width: 67rem;
     margin: auto;
@@ -63,77 +75,57 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
+    padding: 1rem;
 }
 
-.container2{
-    background-color: rgba(0, 0, 0, 0.6);
-    width: 67rem;
-    margin: auto;
-    margin-top: 0.55rem;
-    backdrop-filter: blur(10px);
+.pro,
+.pro2 {
+    background-color: rgba(255, 255, 255, 0.3);
+    max-width: fit-content; 
+    margin: 1rem;
+    padding: 1rem;
     border-radius: 20px;
+    height: 27rem; 
+    box-sizing: border-box;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between; 
     align-items: center;
+    text-align: center;
 }
 
-.pro{
-    background-color: rgba(255, 255, 255, 0.3);
-    max-width: fit-content;
-    margin: 1rem;
-    padding: 1rem;
-    border-radius: 20px;
-    height: 27rem;
+.pro2 {
+    height: 14rem; 
 }
 
-.pro2{
-    background-color: rgba(255, 255, 255, 0.3);
-    max-width: fit-content;
-    margin: 1rem;
-    padding: 1rem;
-    border-radius: 20px;
-    height: 14rem;
-}
-
-#img001{
+#img001,
+#img002 {
     margin: auto;
     max-height: 17rem;
     border-radius: 15px;
     margin-bottom: 10px;
     aspect-ratio: 9/16;
     object-fit: cover;
-    transition: ease-in-out,0.5s;
+    transition: ease-in-out, 0.5s;
+    width: 100%; 
 }
 
-#img001:hover{
-    transform: scale(1.5);
+#img001:hover,
+#img002:hover {
+    transform: scale(1.1); 
     transform-style: preserve-3d;
 }
 
-#img002{
-    margin: auto;
-    max-height: 17rem;
-    border-radius: 15px;
-    margin-bottom: 10px;
-    aspect-ratio: 9/16;
-    object-fit: cover;
-    transition: ease-in-out,0.5s;
-}
-
-#img002:hover{
-    transform: scale(1.5);
-    transform-style: preserve-3d;
-}
-
-.Text{
+.Text {
     font-family: "Quicksand", sans-serif;
     padding-top: 0px;
     margin-top: 0px;
     text-align: center;
     color: white;
 }
-.button{
+
+.button {
     font-family: "Quicksand", sans-serif;
     color: rgb(0, 0, 0);
     backdrop-filter: blur(10px);
@@ -142,22 +134,17 @@
     border-radius: 10px;
     font-size: 15px;
     padding: 5px;
-    background-color:rgba(161, 161, 161, 0.849);
-    transition: ease,0.5s;
+    background-color: rgba(161, 161, 161, 0.849);
+    transition: ease, 0.5s;
     border: none;
+    cursor: pointer; 
 }
 
-.button:hover{
+.button:hover {
     background-color: aquamarine;
 }
-body{
-    background-image: url("https://images.pexels.com/photos/164005/pexels-photo-164005.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-}
 
-footer{
+footer {
     font-family: "Quicksand", sans-serif;
     padding: 20px;
     width: 69%;
@@ -168,19 +155,169 @@ footer{
     color: white;
     margin-top: 15px;
     border-radius: 20px;
+    box-sizing: border-box;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-.footerdiv1{
+.footerdiv1 {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
-.footerdiv{
+.footerdiv {
     padding: 0px 5px 0px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .header {
+        height: 4rem;
+        font-size: 2rem;
+    }
+
+    .tagline {
+        font-size: 0.6rem;
+        margin-top: -5px;
+    }
+
+    .summercollections {
+        font-size: 1.2rem;
+        width: 90%; 
+        margin-top: 5rem;
+    }
+
+    .container1,
+    .container2 {
+        width: 95%; 
+        flex-direction: column; 
+        padding: 0.5rem;
+    }
+
+    .pro,
+    .pro2 {
+        max-width: 90%; 
+        margin: 0.5rem;
+        height: auto;
+        width: 100%; 
+    }
+
+    #img001,
+    #img002 {
+        max-height: 10rem; 
+        aspect-ratio: auto; 
+    }
+
+    #img001:hover,
+    #img002:hover {
+        transform: none; 
+    }
+
+    .Text {
+        font-size: 0.9rem;
+    }
+
+    .button {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    footer {
+        width: 95%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .footerdiv1 {
+        flex-direction: column;
+    }
+
+    .footerdiv {
+        padding: 5px 0;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    .header {
+        height: 5rem;
+        font-size: 2.5rem;
+    }
+
+    .summercollections {
+        width: 30rem;
+    }
+
+    .container1,
+    .container2 {
+        width: 90%;
+        flex-wrap: wrap; 
+    }
+
+    .pro,
+    .pro2 {
+        max-width: 45%; 
+        margin: 0.8rem;
+        height: auto;
+    }
+
+    #img001,
+    #img002 {
+        max-height: 14rem;
+    }
+
+    footer {
+        width: 90%;
+    }
+}
+
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+    .container1,
+    .container2 {
+        width: 90%;
+        flex-wrap: wrap;
+    }
+
+    .pro,
+    .pro2 {
+        max-width: 30%; 
+        margin: 1rem;
+    }
+
+    #img001,
+    #img002 {
+        max-height: 16rem;
+    }
+
+    footer {
+        width: 85%;
+    }
+}
+
+
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+    .container1,
+    .container2 {
+        width: 80%;
+    }
+
+    footer {
+        width: 75%;
+    }
+}
+
+@media only screen and (min-width: 1201px) {
+    .container1,
+    .container2 {
+        width: 67rem;
+    }
+
+    footer {
+        width: 69%; 
+    }
 }
